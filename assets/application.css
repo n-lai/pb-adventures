@@ -4,7 +4,7 @@ body, html {
    background: linear-gradient(90deg, #031131, #284C75);
    font-family: 'Open Sans', Calibri;
    font-weight: 400;
-   overflow: hidden;
+   /*overflow: hidden;*/
 }
 
 /*image flip*/
@@ -16,6 +16,10 @@ body, html {
 body {
   font-family: Avenir, Arial, sans-serif;
   margin: 2%;
+}
+
+.images {
+  position: absolute;
 }
 
 div.flip-3d {
@@ -42,14 +46,18 @@ div.flip-3d figure img {
 div.flip-3d figure figcaption {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 111px);
   top: 0;
   transform: rotateY(.5turn) translateZ(1px);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.7);
   text-align: center;
-  padding-top: 45%;
   opacity: 0.6;
   transition: 1s .5s opacity;
+}
+
+div.flip-3d figure figcaption p {
+  padding-top: 30%;
+  font-size: 12px;
 }
 
 div.flip-3d:hover figure {
@@ -636,24 +644,24 @@ div.flip-3d figure:after {
   }
   25% {
     background-color: Rgba(255, 255, 255, 0.31);
-    -webkit-transform: translateX(-2px) translateY(-20px);
-            transform: translateX(-2px) translateY(-20px);
+    -webkit-transform: translateX(-2px) translateY(200px);
+            transform: translateX(-2px) translateY(200px);
   }
   40% {
     background-color: Rgba(255, 255, 255, 0.385);
   }
   50% {
     background-color: Rgba(255, 255, 255, 0.35);
-    -webkit-transform: translateX(-44px) translateY(-12px);
-            transform: translateX(-44px) translateY(-12px);
+    -webkit-transform: translateX(-44px) translateY(400px);
+            transform: translateX(-44px) translateY(400px);
   }
   60% {
     background-color: Rgba(255, 255, 255, 0.36);
   }
   75% {
     background-color: Rgba(255, 255, 255, 0.324);
-    -webkit-transform: translateX(-50px) translateY(-7px);
-            transform: translateX(-50px) translateY(-7px);
+    -webkit-transform: translateX(-50px) translateY(700px);
+            transform: translateX(-50px) translateY(700px);
   }
   100% {
     background-color: Rgba(255, 255, 255, 0.3);
