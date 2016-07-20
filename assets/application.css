@@ -4,8 +4,23 @@ body, html {
    background: linear-gradient(90deg, #031131, #284C75);
    font-family: 'Open Sans', Calibri;
    font-weight: 400;
+   margin: 0;
 }
 
+header {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  text-align: center;
+  color: lightgrey;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  margin: 10px 0 10px 0;
+}
 /*image flip*/
 
 * {
@@ -14,11 +29,17 @@ body, html {
 
 body {
   font-family: Avenir, Arial, sans-serif;
+}
+
+main {
   margin: 2%;
 }
 
 .images {
   position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 div.flip-3d {
@@ -640,8 +661,8 @@ div.flip-3d figure:after {
 @keyframes sparkle {
   0% {
     background-color: Rgba(255, 255, 255, 0.3);
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateX(0) translateY(105px);
+            transform: translateX(0) translateY(105px);
   }
   25% {
     background-color: Rgba(255, 255, 255, 0.31);
@@ -666,7 +687,7 @@ div.flip-3d figure:after {
   }
   100% {
     background-color: Rgba(255, 255, 255, 0.3);
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateX(0) translateY(105px);
+            transform: translateX(0) translateY(105px);
   }
 }
