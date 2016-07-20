@@ -1,0 +1,663 @@
+body, html {
+   height: 100%;
+   width: 100%;
+   background: linear-gradient(90deg, #031131, #284C75);
+   font-family: 'Open Sans', Calibri;
+   font-weight: 400;
+   overflow: hidden;
+}
+
+/*image flip*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Avenir, Arial, sans-serif;
+  margin: 2%;
+}
+
+div.flip-3d {
+  perspective: 1200px;
+  width: 28%;
+  display: inline-block;
+  margin: 2%;
+  position: relative;
+  z-index: 9999
+}
+
+div.flip-3d figure {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 1s transform;
+  font-size: 1.6rem;
+}
+
+div.flip-3d figure img {
+  width: 100%;
+  height: auto;
+}
+
+div.flip-3d figure figcaption {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: rotateY(.5turn) translateZ(1px);
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  padding-top: 45%;
+  opacity: 0.6;
+  transition: 1s .5s opacity;
+}
+
+div.flip-3d:hover figure {
+  transform: rotateY(.5turn);
+}
+
+div.flip-3d:hover figure figcaption {
+  opacity: 1;
+}
+
+div.flip-3d figure:after {
+  content: " ";
+  display: block;
+  height: 8vw;
+  width: 100%;
+  transform: rotateX(90deg);
+  background-image: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+@media screen and (max-width: 800px) {
+  div#flip-3d {
+    perspective-origin: center top;
+  }
+  div#flip-3d figure {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 12vw;
+  }
+  div#flip-3d figure:last-child {
+    display: none;
+  }
+}
+
+.particles {
+  height: 100%;
+  width: 100%;
+}
+.particles .particle {
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+}
+.particles .particle:nth-child(1) {
+  top: 8%;
+  left: 85%;
+  height: 1.4px;
+  width: 1.4px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 24188ms -2454s ease-in-out infinite;
+          animation: sparkle 24188ms -2454s ease-in-out infinite;
+}
+.particles .particle:nth-child(2) {
+  top: 37%;
+  left: 72%;
+  height: 2.8px;
+  width: 2.8px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 22620ms -5826s ease-in-out infinite;
+          animation: sparkle 22620ms -5826s ease-in-out infinite;
+}
+.particles .particle:nth-child(3) {
+  top: 32%;
+  left: 16%;
+  height: 4.2px;
+  width: 4.2px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 21324ms -6695s ease-in-out infinite;
+          animation: sparkle 21324ms -6695s ease-in-out infinite;
+}
+.particles .particle:nth-child(4) {
+  top: 43%;
+  left: 74%;
+  height: 5.6px;
+  width: 5.6px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 22858ms -2640s ease-in-out infinite;
+          animation: sparkle 22858ms -2640s ease-in-out infinite;
+}
+.particles .particle:nth-child(5) {
+  top: 38%;
+  left: 42%;
+  height: 7px;
+  width: 7px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 20371ms -1392s ease-in-out infinite;
+          animation: sparkle 20371ms -1392s ease-in-out infinite;
+}
+.particles .particle:nth-child(6) {
+  top: 21%;
+  left: 50%;
+  height: 8.4px;
+  width: 8.4px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 24190ms -1117s ease-in-out infinite;
+          animation: sparkle 24190ms -1117s ease-in-out infinite;
+}
+.particles .particle:nth-child(7) {
+  top: 22%;
+  left: 53%;
+  height: 9.8px;
+  width: 9.8px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 23342ms -8499s ease-in-out infinite;
+          animation: sparkle 23342ms -8499s ease-in-out infinite;
+}
+.particles .particle:nth-child(8) {
+  top: 46%;
+  left: 58%;
+  height: 11.2px;
+  width: 11.2px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 22107ms -4296s ease-in-out infinite;
+          animation: sparkle 22107ms -4296s ease-in-out infinite;
+}
+.particles .particle:nth-child(9) {
+  top: 38%;
+  left: 100%;
+  height: 12.6px;
+  width: 12.6px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 24694ms -6257s ease-in-out infinite;
+          animation: sparkle 24694ms -6257s ease-in-out infinite;
+}
+.particles .particle:nth-child(10) {
+  top: 38%;
+  left: 47%;
+  height: 14px;
+  width: 14px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 23746ms -6305s ease-in-out infinite;
+          animation: sparkle 23746ms -6305s ease-in-out infinite;
+}
+.particles .particle:nth-child(11) {
+  top: 12%;
+  left: 95%;
+  height: 15.4px;
+  width: 15.4px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 22568ms -6654s ease-in-out infinite;
+          animation: sparkle 22568ms -6654s ease-in-out infinite;
+}
+.particles .particle:nth-child(12) {
+  top: 3%;
+  left: 79%;
+  height: 16.8px;
+  width: 16.8px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 22084ms -3282s ease-in-out infinite;
+          animation: sparkle 22084ms -3282s ease-in-out infinite;
+}
+.particles .particle:nth-child(13) {
+  top: 47%;
+  left: 40%;
+  height: 18.2px;
+  width: 18.2px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 21589ms -8154s ease-in-out infinite;
+          animation: sparkle 21589ms -8154s ease-in-out infinite;
+}
+.particles .particle:nth-child(14) {
+  top: 23%;
+  left: 67%;
+  height: 19.6px;
+  width: 19.6px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 21187ms -6500s ease-in-out infinite;
+          animation: sparkle 21187ms -6500s ease-in-out infinite;
+}
+.particles .particle:nth-child(15) {
+  top: 48%;
+  left: 26%;
+  height: 21px;
+  width: 21px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 22889ms -7354s ease-in-out infinite;
+          animation: sparkle 22889ms -7354s ease-in-out infinite;
+}
+.particles .particle:nth-child(16) {
+  top: 3%;
+  left: 81%;
+  height: 22.4px;
+  width: 22.4px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 21662ms -1847s ease-in-out infinite;
+          animation: sparkle 21662ms -1847s ease-in-out infinite;
+}
+.particles .particle:nth-child(17) {
+  top: 17%;
+  left: 51%;
+  height: 23.8px;
+  width: 23.8px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 20548ms -9959s ease-in-out infinite;
+          animation: sparkle 20548ms -9959s ease-in-out infinite;
+}
+.particles .particle:nth-child(18) {
+  top: 16%;
+  left: 79%;
+  height: 25.2px;
+  width: 25.2px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 24118ms -6846s ease-in-out infinite;
+          animation: sparkle 24118ms -6846s ease-in-out infinite;
+}
+.particles .particle:nth-child(19) {
+  top: 24%;
+  left: 34%;
+  height: 26.6px;
+  width: 26.6px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 23681ms -5202s ease-in-out infinite;
+          animation: sparkle 23681ms -5202s ease-in-out infinite;
+}
+.particles .particle:nth-child(20) {
+  top: 21%;
+  left: 38%;
+  height: 28px;
+  width: 28px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 21270ms -4398s ease-in-out infinite;
+          animation: sparkle 21270ms -4398s ease-in-out infinite;
+}
+.particles .particle:nth-child(21) {
+  top: 14%;
+  left: 8%;
+  height: 29.4px;
+  width: 29.4px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 20912ms -3309s ease-in-out infinite;
+          animation: sparkle 20912ms -3309s ease-in-out infinite;
+}
+.particles .particle:nth-child(22) {
+  top: 22%;
+  left: 66%;
+  height: 30.8px;
+  width: 30.8px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 22563ms -4741s ease-in-out infinite;
+          animation: sparkle 22563ms -4741s ease-in-out infinite;
+}
+.particles .particle:nth-child(23) {
+  top: 23%;
+  left: 76%;
+  height: 32.2px;
+  width: 32.2px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 23981ms -5840s ease-in-out infinite;
+          animation: sparkle 23981ms -5840s ease-in-out infinite;
+}
+.particles .particle:nth-child(24) {
+  top: 19%;
+  left: 78%;
+  height: 33.6px;
+  width: 33.6px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 22574ms -4153s ease-in-out infinite;
+          animation: sparkle 22574ms -4153s ease-in-out infinite;
+}
+.particles .particle:nth-child(25) {
+  top: 30%;
+  left: 64%;
+  height: 35px;
+  width: 35px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 24076ms -9017s ease-in-out infinite;
+          animation: sparkle 24076ms -9017s ease-in-out infinite;
+}
+.particles .particle:nth-child(26) {
+  top: 11%;
+  left: 26%;
+  height: 36.4px;
+  width: 36.4px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 23997ms -4646s ease-in-out infinite;
+          animation: sparkle 23997ms -4646s ease-in-out infinite;
+}
+.particles .particle:nth-child(27) {
+  top: 41%;
+  left: 17%;
+  height: 37.8px;
+  width: 37.8px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 22780ms -8341s ease-in-out infinite;
+          animation: sparkle 22780ms -8341s ease-in-out infinite;
+}
+.particles .particle:nth-child(28) {
+  top: 35%;
+  left: 44%;
+  height: 39.2px;
+  width: 39.2px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 24220ms -8224s ease-in-out infinite;
+          animation: sparkle 24220ms -8224s ease-in-out infinite;
+}
+.particles .particle:nth-child(29) {
+  top: 11%;
+  left: 23%;
+  height: 40.6px;
+  width: 40.6px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 20083ms -1445s ease-in-out infinite;
+          animation: sparkle 20083ms -1445s ease-in-out infinite;
+}
+.particles .particle:nth-child(30) {
+  top: 5%;
+  left: 73%;
+  height: 42px;
+  width: 42px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 23683ms -1940s ease-in-out infinite;
+          animation: sparkle 23683ms -1940s ease-in-out infinite;
+}
+.particles .particle:nth-child(31) {
+  top: 12%;
+  left: 8%;
+  height: 43.4px;
+  width: 43.4px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 23917ms -5399s ease-in-out infinite;
+          animation: sparkle 23917ms -5399s ease-in-out infinite;
+}
+.particles .particle:nth-child(32) {
+  top: 13%;
+  left: 11%;
+  height: 44.8px;
+  width: 44.8px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 23702ms -5386s ease-in-out infinite;
+          animation: sparkle 23702ms -5386s ease-in-out infinite;
+}
+.particles .particle:nth-child(33) {
+  top: 28%;
+  left: 32%;
+  height: 46.2px;
+  width: 46.2px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 22309ms -4086s ease-in-out infinite;
+          animation: sparkle 22309ms -4086s ease-in-out infinite;
+}
+.particles .particle:nth-child(34) {
+  top: 25%;
+  left: 27%;
+  height: 47.6px;
+  width: 47.6px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 22638ms -6682s ease-in-out infinite;
+          animation: sparkle 22638ms -6682s ease-in-out infinite;
+}
+.particles .particle:nth-child(35) {
+  top: 35%;
+  left: 10%;
+  height: 49px;
+  width: 49px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 23327ms -8438s ease-in-out infinite;
+          animation: sparkle 23327ms -8438s ease-in-out infinite;
+}
+.particles .particle:nth-child(36) {
+  top: 21%;
+  left: 50%;
+  height: 50.4px;
+  width: 50.4px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 22421ms -395s ease-in-out infinite;
+          animation: sparkle 22421ms -395s ease-in-out infinite;
+}
+.particles .particle:nth-child(37) {
+  top: 32%;
+  left: 41%;
+  height: 51.8px;
+  width: 51.8px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 22497ms -5529s ease-in-out infinite;
+          animation: sparkle 22497ms -5529s ease-in-out infinite;
+}
+.particles .particle:nth-child(38) {
+  top: 8%;
+  left: 35%;
+  height: 53.2px;
+  width: 53.2px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 20003ms -539s ease-in-out infinite;
+          animation: sparkle 20003ms -539s ease-in-out infinite;
+}
+.particles .particle:nth-child(39) {
+  top: 22%;
+  left: 79%;
+  height: 54.6px;
+  width: 54.6px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 20866ms -2159s ease-in-out infinite;
+          animation: sparkle 20866ms -2159s ease-in-out infinite;
+}
+.particles .particle:nth-child(40) {
+  top: 10%;
+  left: 60%;
+  height: 56px;
+  width: 56px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 20092ms -4018s ease-in-out infinite;
+          animation: sparkle 20092ms -4018s ease-in-out infinite;
+}
+.particles .particle:nth-child(41) {
+  top: 9%;
+  left: 71%;
+  height: 57.4px;
+  width: 57.4px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 21918ms -1104s ease-in-out infinite;
+          animation: sparkle 21918ms -1104s ease-in-out infinite;
+}
+.particles .particle:nth-child(42) {
+  top: 8%;
+  left: 76%;
+  height: 58.8px;
+  width: 58.8px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 21094ms -4827s ease-in-out infinite;
+          animation: sparkle 21094ms -4827s ease-in-out infinite;
+}
+.particles .particle:nth-child(43) {
+  top: 47%;
+  left: 61%;
+  height: 60.2px;
+  width: 60.2px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 22264ms -8049s ease-in-out infinite;
+          animation: sparkle 22264ms -8049s ease-in-out infinite;
+}
+.particles .particle:nth-child(44) {
+  top: 12%;
+  left: 92%;
+  height: 61.6px;
+  width: 61.6px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 20042ms -7120s ease-in-out infinite;
+          animation: sparkle 20042ms -7120s ease-in-out infinite;
+}
+.particles .particle:nth-child(45) {
+  top: 27%;
+  left: 57%;
+  height: 63px;
+  width: 63px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 23710ms -1801s ease-in-out infinite;
+          animation: sparkle 23710ms -1801s ease-in-out infinite;
+}
+.particles .particle:nth-child(46) {
+  top: 28%;
+  left: 43%;
+  height: 64.4px;
+  width: 64.4px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 24608ms -5244s ease-in-out infinite;
+          animation: sparkle 24608ms -5244s ease-in-out infinite;
+}
+.particles .particle:nth-child(47) {
+  top: 20%;
+  left: 84%;
+  height: 65.8px;
+  width: 65.8px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 20350ms -4987s ease-in-out infinite;
+          animation: sparkle 20350ms -4987s ease-in-out infinite;
+}
+.particles .particle:nth-child(48) {
+  top: 8%;
+  left: 55%;
+  height: 67.2px;
+  width: 67.2px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 23705ms -6859s ease-in-out infinite;
+          animation: sparkle 23705ms -6859s ease-in-out infinite;
+}
+.particles .particle:nth-child(49) {
+  top: 3%;
+  left: 99%;
+  height: 68.6px;
+  width: 68.6px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 24882ms -9568s ease-in-out infinite;
+          animation: sparkle 24882ms -9568s ease-in-out infinite;
+}
+.particles .particle:nth-child(50) {
+  top: 47%;
+  left: 30%;
+  height: 70px;
+  width: 70px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-animation: sparkle 21502ms -5522s ease-in-out infinite;
+          animation: sparkle 21502ms -5522s ease-in-out infinite;
+}
+
+@-webkit-keyframes sparkle {
+  0% {
+    background-color: Rgba(255, 255, 255, 0.3);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  25% {
+    background-color: Rgba(255, 255, 255, 0.31);
+    -webkit-transform: translateX(-2px) translateY(-20px);
+            transform: translateX(-2px) translateY(-20px);
+  }
+  40% {
+    background-color: Rgba(255, 255, 255, 0.385);
+  }
+  50% {
+    background-color: Rgba(255, 255, 255, 0.35);
+    -webkit-transform: translateX(-44px) translateY(-12px);
+            transform: translateX(-44px) translateY(-12px);
+  }
+  60% {
+    background-color: Rgba(255, 255, 255, 0.36);
+  }
+  75% {
+    background-color: Rgba(255, 255, 255, 0.324);
+    -webkit-transform: translateX(-50px) translateY(-7px);
+            transform: translateX(-50px) translateY(-7px);
+  }
+  100% {
+    background-color: Rgba(255, 255, 255, 0.3);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    background-color: Rgba(255, 255, 255, 0.3);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  25% {
+    background-color: Rgba(255, 255, 255, 0.31);
+    -webkit-transform: translateX(-2px) translateY(-20px);
+            transform: translateX(-2px) translateY(-20px);
+  }
+  40% {
+    background-color: Rgba(255, 255, 255, 0.385);
+  }
+  50% {
+    background-color: Rgba(255, 255, 255, 0.35);
+    -webkit-transform: translateX(-44px) translateY(-12px);
+            transform: translateX(-44px) translateY(-12px);
+  }
+  60% {
+    background-color: Rgba(255, 255, 255, 0.36);
+  }
+  75% {
+    background-color: Rgba(255, 255, 255, 0.324);
+    -webkit-transform: translateX(-50px) translateY(-7px);
+            transform: translateX(-50px) translateY(-7px);
+  }
+  100% {
+    background-color: Rgba(255, 255, 255, 0.3);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
