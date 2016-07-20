@@ -53,10 +53,12 @@ div.flip-3d figure figcaption {
   text-align: center;
   opacity: 0.6;
   transition: 1s .5s opacity;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 div.flip-3d figure figcaption p {
-  padding-top: 30%;
   font-size: 12px;
 }
 
